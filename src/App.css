@@ -718,7 +718,7 @@ line-height: 1;
     .x-ray-wrapper{aspect-ratio: 9/16;border-radius:20px;}
     .project-media{margin-top:30px;}
     .project-info{flex:0 0 auto}
-    .visual-block{width:270px}
+    .visual-block{width:270px;height:420px}
     /* .visual-block img, .visual-block video{max-width:270px;} */
     .skills-lane:before{top:-16%}
     .skills-lane:after{bottom:-16%}
