@@ -11,16 +11,15 @@ export default function Landing(props) {
     const loaderBlock = [1, 2]
     const countRef = useRef(null)
     const trackRef = useRef(null)
-    const loaderTl = gsap.timeline({
+    const loaderTl = gsap.timeline(/*{
         onStart: () => {
             document.body.style.overflow = 'hidden';
         },
         onComplete: () => {
-            // Clear the inline style rather than forcing 'visible'
-            // This hands control back to your CSS stylesheet
+            
             document.body.style.overflow = '';
         }
-    })
+    }*/)
     useGSAP(() => {
         if (!countRef) return
         let obj = { count: 0 }
