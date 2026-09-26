@@ -13,7 +13,6 @@ export default function Canvas({ setTl }) {
     useGSAP(() => {
         const canvas = canvasEl.current;
         if (!canvas) return;
-        ScrollTrigger.normalizeScroll(true);
         let resizeHandler;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -71,12 +70,11 @@ export default function Canvas({ setTl }) {
             const landingTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: '.landing',
-                    start: 'top -1px',
+                    start: 'top top',
                     end: '+=1500',
                     scrub: 1,
                     pin: true,
                     pinSpacing: true,
-                    anticipatePin: 1
                 }
             });
             setTl(landingTl);
