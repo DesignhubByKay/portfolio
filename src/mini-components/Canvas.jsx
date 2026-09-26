@@ -6,7 +6,6 @@ import { LoadingContext } from '../components/LoadingContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 export default function Canvas({ setTl }) {
     const canvasEl = useRef(null);
     const setIsLoaded = useContext(LoadingContext);
@@ -83,7 +82,7 @@ export default function Canvas({ setTl }) {
             setTl(landingTl);
             setIsLoaded(true);
             setTimeout(() => ScrollTrigger.refresh(), 50);
-            setTimeout(() => {
+
             loadRemainingFrames(firstImg).then((allImages) => {
 
                 landingTl.to(animation, {
@@ -100,19 +99,13 @@ export default function Canvas({ setTl }) {
                         canvas.height = window.innerHeight;
                         renderFrames(Math.round(animation.frame), allImages);
                         ScrollTrigger.refresh();
-
                     }
                 };
 
                 window.addEventListener('resize', resizeHandler);
 
                 ScrollTrigger.refresh();
-                landingTl.progress(0.001).progress(0);
-                requestAnimationFrame(() => {
-                    renderFrames(0, allImages);
-                });
             });
-            }, 4000);
         });
 
         // Cleanup Lifecycle

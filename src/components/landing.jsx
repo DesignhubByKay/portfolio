@@ -22,10 +22,10 @@ export default function Landing(props) {
     //     }
     // }*/)
     useGSAP(() => {
-        const tl = gsap.timeline({
+        const tl = gsap.timeline(/*{
             onStart: () => { document.body.style.overflow = 'hidden'; },
             onComplete: () => { document.body.style.overflow = ''; }
-        });
+        }*/);
         if (!countRef) return
         let obj = { count: 0 }
 
