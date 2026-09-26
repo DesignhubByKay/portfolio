@@ -46,7 +46,7 @@ export default function Canvas({ setTl }) {
         const loadInitialFrame = () => {
             return new Promise((resolve) => {
                 const img = new Image();
-                img.src = new URL(`../assets/landingImages/1.png`, import.meta.url).href;
+                img.src = new URL(`../assets/landingImages/1.webp`, import.meta.url).href;
                 img.decode().then(() => resolve(img)).catch(() => resolve(img));
             });
         };
@@ -57,7 +57,7 @@ export default function Canvas({ setTl }) {
             for (let i = 2; i <= 82; i++) {
                 promises.push(new Promise((resolve) => {
                     const img = new Image();
-                    img.src = new URL(`../assets/landingImages/${i}.png`, import.meta.url).href;
+                    img.src = new URL(`../assets/landingImages/${i}.webp`, import.meta.url).href;
                     img.decode().then(() => resolve(img)).catch(() => resolve(img));
                 }));
             }
