@@ -11,7 +11,7 @@ const SmoothScroll = () => {
     const lenis = new Lenis({
       duration: 1.2,
       smoothWheel: true,
-      touchMultiplier: 1,
+      touchMultiplier: 1, // Increase this slightly on mobile to offset the touch sync
     });
 
     lenis.on("scroll", ScrollTrigger.update);

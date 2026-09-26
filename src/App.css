@@ -509,6 +509,7 @@ line-height: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex:1;
 }
 .project-media video{
     max-width: 90%;
