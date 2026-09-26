@@ -59,7 +59,9 @@ body{
 /**** Landing CSS ****/
 
 /* Horizontal Text CSS */
-
+.landing {
+  height: 100dvh; /* Or 100svh if you want a strict lock */
+}
 canvas {
     display: block;
     max-width: 100%;

@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { LoadingContext } from '../components/LoadingContext';
 
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 export default function Canvas({ setTl }) {
     const canvasEl = useRef(null);
@@ -56,8 +57,10 @@ export default function Canvas({ setTl }) {
             for (let i = 2; i <= 82; i++) {
                 promises.push(new Promise((resolve) => {
                     const img = new Image();
+                    // Rely on native onload caching instead of forced VRAM decoding
+                    img.onload = () => resolve(img);
+                    img.onerror = () => resolve(img);
                     img.src = new URL(`../assets/landingImages/${i}.webp`, import.meta.url).href;
-                    img.decode().then(() => resolve(img)).catch(() => resolve(img));
                 }));
             }
             return Promise.all(promises).then(rest => [firstImg, ...rest]);
