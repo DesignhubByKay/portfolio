@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { LoadingContext } from '../components/LoadingContext';
 
 gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.config({ ignoreMobileResize: true });
+
 
 export default function Canvas({ setTl }) {
     const canvasEl = useRef(null);
@@ -83,7 +83,7 @@ export default function Canvas({ setTl }) {
             setTl(landingTl);
             setIsLoaded(true);
             setTimeout(() => ScrollTrigger.refresh(), 50);
-
+            setTimeout(() => {
             loadRemainingFrames(firstImg).then((allImages) => {
 
                 landingTl.to(animation, {
@@ -112,6 +112,7 @@ export default function Canvas({ setTl }) {
                     renderFrames(0, allImages);
                 });
             });
+            }, 4000);
         });
 
         // Cleanup Lifecycle
