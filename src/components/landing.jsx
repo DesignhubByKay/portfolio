@@ -8,6 +8,7 @@ import { useGSAP } from '@gsap/react'
 
 export default function Landing(props) {
     const [tl, setTl] = useState(null)
+    const [loaderTl, setLoaderTl] = useState(null); 
     const loaderBlock = [1, 2]
     const countRef = useRef(null)
     const trackRef = useRef(null)
@@ -21,14 +22,14 @@ export default function Landing(props) {
     //     }
     // }*/)
     useGSAP(() => {
-        const loaderTl = gsap.timeline({
+        const tl = gsap.timeline({
             onStart: () => { document.body.style.overflow = 'hidden'; },
             onComplete: () => { document.body.style.overflow = ''; }
         });
         if (!countRef) return
         let obj = { count: 0 }
 
-        loaderTl.to(obj, {
+        tl.to(obj, {
             count: 100,
             duration: 3,
             ease: 'none',
@@ -38,7 +39,7 @@ export default function Landing(props) {
                 }
             }
         }, 0)
-        loaderTl.to(trackRef.current, {
+        tl.to(trackRef.current, {
             yPercent: -33.33, // Pushes track up to reveal "Create"
             duration: 0.8,
             delay: .5,
@@ -51,10 +52,11 @@ export default function Landing(props) {
                 delay: .5,
                 ease: "expo.inOut"
             }, "<+0.8")
-            loaderTl.add('loaderExit', 3) 
+            tl.add('loaderExit', 3) 
             .to('.loader-block-1', { y: '-100%', duration: 0.5, ease: 'power2.inOut' }, 'loaderExit')
             .to('.loader-block-2', { y: '100%', duration: 0.5, ease: 'power2.inOut' }, 'loaderExit')
             .to('.loader', { display: 'none' }, '<+.1');
+            setLoaderTl(tl);
     }, [])
 
     return (
