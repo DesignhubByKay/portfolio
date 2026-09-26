@@ -97,12 +97,17 @@ export default function Canvas({ setTl }) {
                         canvas.height = window.innerHeight;
                         renderFrames(Math.round(animation.frame), allImages);
                         ScrollTrigger.refresh();
+
                     }
                 };
 
                 window.addEventListener('resize', resizeHandler);
 
                 ScrollTrigger.refresh();
+                landingTl.progress(0.001).progress(0);
+                requestAnimationFrame(() => {
+                    renderFrames(0, allImages);
+                });
             });
         });
 
