@@ -11,19 +11,22 @@ export default function Landing(props) {
     const loaderBlock = [1, 2]
     const countRef = useRef(null)
     const trackRef = useRef(null)
-    const loaderTl = gsap.timeline(/*{
-        onStart: () => {
-            document.body.style.overflow = 'hidden';
-        },
-        onComplete: () => {
+    // const loaderTl = gsap.timeline(/*{
+    //     onStart: () => {
+    //         document.body.style.overflow = 'hidden';
+    //     },
+    //     onComplete: () => {
             
-            document.body.style.overflow = '';
-        }
-    }*/)
+    //         document.body.style.overflow = '';
+    //     }
+    // }*/)
     useGSAP(() => {
+        const loaderTl = gsap.timeline({
+            onStart: () => { document.body.style.overflow = 'hidden'; },
+            onComplete: () => { document.body.style.overflow = ''; }
+        });
         if (!countRef) return
         let obj = { count: 0 }
-        const loaderBlock = gsap.utils.toArray('.loader-block')
 
         loaderTl.to(obj, {
             count: 100,
@@ -38,29 +41,20 @@ export default function Landing(props) {
         loaderTl.to(trackRef.current, {
             yPercent: -33.33, // Pushes track up to reveal "Create"
             duration: 0.8,
-            delay:.5,
+            delay: .5,
             ease: "expo.inOut" // A harsh, cinematic curve
         }, 0) // Wait half a second before shifting
 
             .to(trackRef.current, {
                 yPercent: -66.66, // Pushes track up to reveal "Inspire"
                 duration: 0.8,
-                delay:.5,
+                delay: .5,
                 ease: "expo.inOut"
             }, "<+0.8")
-            .to('.loader-block-1',{
-                y:'-100%',
-                duration:.5,
-                ease:'power2.inOut'
-            },'loader')
-            .to('.loader-block-2',{
-                y:'100%',
-                duration:.5,
-                ease:'power2.inOut'
-            },'loader')
-            .to('.loader', {
-                display: 'none',
-            }, '<+.1')
+            loaderTl.add('loaderExit', 3) 
+            .to('.loader-block-1', { y: '-100%', duration: 0.5, ease: 'power2.inOut' }, 'loaderExit')
+            .to('.loader-block-2', { y: '100%', duration: 0.5, ease: 'power2.inOut' }, 'loaderExit')
+            .to('.loader', { display: 'none' }, '<+.1');
     }, [])
 
     return (
