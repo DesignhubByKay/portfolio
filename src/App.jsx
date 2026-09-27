@@ -35,8 +35,8 @@ function App() {
           <Dive />
           <About />
           <Skills />
-          <Xray />
-          <Projects />
+          {window.innerWidth > 768 ? <Xray /> : ''}
+          <Projects /> 
           <TerminalContact />
         </>
       }

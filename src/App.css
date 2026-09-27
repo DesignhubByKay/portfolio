@@ -513,6 +513,7 @@ line-height: 1;
 }
 .project-media video{
     max-width: 90%;
+    width:100%;
     margin: auto;
 }
 .project-info h2 span{color:rgb(255, 143, 23)}
@@ -726,6 +727,7 @@ line-height: 1;
     .social-info{flex-direction: column;gap:20px;align-items: flex-start;}
     .navbar li{font-size:40px}
     .navbar ul{gap:20px}
+    
     .close-menu{padding:10px}
 }
 @media screen and (max-width:575px){
