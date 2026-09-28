@@ -13,28 +13,28 @@ export default function Projects() {
     const bsrArr = {
         name: 'BSR',
         sureName: 'Projects',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo at facilis eaque, cupiditate nam rem commodi ipsam, error totam quo fugit, veritatis blanditiis et repellendus.',
+        description: 'Crafted a refined brand identity and digital presence for BSR Projects, bringing together architecture, interiors, modular solutions, and construction under one cohesive experience.',
         tech: ['wordpress', 'photoshop', 'nano banana', 'illustrator', 'figma', 'veo flash'],
         media: bsr
     }
     const devAppArr = {
         name: 'DevApps',
         sureName: 'IT',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo at facilis eaque, cupiditate nam rem commodi ipsam, error totam quo fugit, veritatis blanditiis et repellendus.',
+        description: 'Built a distinctive brand identity and digital experience for DevApps IT, translating complex AI, analytics, and enterprise solutions into a clear and modern visual language.',
         tech: ['wordpress', 'photoshop', 'nano banana', 'illustrator', 'figma', 'veo flash'],
         media: devApp
     }
     const japArr = {
         name: 'Japji',
         sureName: 'Law',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo at facilis eaque, cupiditate nam rem commodi ipsam, error totam quo fugit, veritatis blanditiis et repellendus.',
+        description: 'Developed a distinctive brand identity and digital experience for Japji Law, extending a sense of trust and professionalism across their legal services and everyday business materials.',
         tech: ['wordpress', 'photoshop', 'nano banana', 'illustrator', 'figma', 'veo flash'],
         media: japji
     }
     const dotArr = {
         name: '.',
-        sureName: 'Respect',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo at facilis eaque, cupiditate nam rem commodi ipsam, error totam quo fugit, veritatis blanditiis et repellendus.',
+        sureName: 'RESPECT',
+        description: 'Created a cinematic coming-soon experience for .RESPECT, blending atmospheric visuals, motion, and storytelling to introduce a new generation of minimalist streetwear',
         tech: ['Shopfiy', 'photoshop', 'nano banana', 'Kling', 'Runway', 'After Effects'],
         media: dot
     }

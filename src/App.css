@@ -15,6 +15,7 @@ body{
   background:#000;
 }
 .secondary-color{color:#FF8F17}
+button{cursor:pointer}
 
 /********* Loader *****/
 
@@ -52,8 +53,23 @@ body{
 .close-menu{border-radius: 100px;}
 .social-text h4{font-size:20px;font-weight:500;text-transform: capitalize;}
 .social-text p{font-size:16px;font-weight:500;}
-.navbar{width:33%;right:-33%;opacity:0;}
+.navbar{width:100%;right:-100%;opacity:0;}
 .header-scrolled{background:#0002}
+.cta-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:0 20px;
+}
+.cta-text h2{text-transform: uppercase;}
+.ctaword3, .ctaword4{color:#FF8F17}
 /*** Navbar Ends ***/
 
 /**** Landing CSS ****/
@@ -505,6 +521,11 @@ line-height: 1;
 .project-info {
     flex: 0 0 50%;
 }
+.project-info p {
+    font-size: 18px;
+    letter-spacing: .5px;
+    line-height: 1.6;
+}
 .project-media {
     display: flex;
     justify-content: center;
@@ -519,8 +540,13 @@ line-height: 1;
 .project-info h2 span{color:rgb(255, 143, 23)}
 .tech-block {
     background: #fff2;
-    text-transform: capitalize;
+    text-transform: uppercase;
     border-radius: 30px;
+    font-weight: 500;
+    color: #ff8f17;
+}
+.project-tech {
+    margin-top: 10px;
 }
 .project-heading{max-width:400px}
 .project-description{max-width:400px}
@@ -718,7 +744,7 @@ line-height: 1;
     .about-content h2{font-size:32px;}
     .cli-answer{padding-left:0;}
     .x-ray-wrapper{aspect-ratio: 9/16;border-radius:20px;}
-    .project-media{margin-top:30px;}
+    .project-media{margin-top:30px;flex:unset}
     .project-info{flex:0 0 auto}
     .visual-block{width:270px;height:420px}
     /* .visual-block img, .visual-block video{max-width:270px;} */
@@ -727,8 +753,9 @@ line-height: 1;
     .social-info{flex-direction: column;gap:20px;align-items: flex-start;}
     .navbar li{font-size:40px}
     .navbar ul{gap:20px}
-    
+    .project-block{min-height:unset!important;height:fit-content!important;max-height:unset!important}
     .close-menu{padding:10px}
+    .cta-text{font-size:32px;}
 }
 @media screen and (max-width:575px){
     

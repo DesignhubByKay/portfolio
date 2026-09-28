@@ -43,14 +43,14 @@ export default function TerminalContact() {
     // Add a ref to track initial mount
     const isMounted = useRef(false);
 
-    useEffect(() => {
-        if (isMounted.current && bottomRef.current) {
-            // Use block: 'nearest' to prevent aggressive jumping
-            bottomRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        } else {
-            isMounted.current = true;
-        }
-    }, [step, isTransmitting, error]);
+    // useEffect(() => {
+    //     if (isMounted.current && bottomRef.current) {
+    //         // Use block: 'nearest' to prevent aggressive jumping
+    //         bottomRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    //     } else {
+    //         isMounted.current = true;
+    //     }
+    // }, [step, isTransmitting, error]);
 
     // GSAP Typewriter & Transmitting Engine
     useGSAP(() => {

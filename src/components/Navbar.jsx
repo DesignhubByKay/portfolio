@@ -7,6 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
+import SplitText from 'gsap/SplitText';
 
 export default function Navbar() {
     const headerRef = useRef(null)
@@ -19,7 +20,10 @@ export default function Navbar() {
             duration: 0.35,
             ease: "power3.inOut",
         })
-
+        const cta = new SplitText('.cta-text h2',{
+            type:'words',
+            wordsClass: "ctaword++",
+        })
         // 2. The Velocity Tracker (Always active)
         ScrollTrigger.create({
             start: "top top",
@@ -58,9 +62,9 @@ export default function Navbar() {
             opacity: 1,
             duration: .5
         })
-        tl.current.from(".navbar ul li", {
+        tl.current.from(".ctaword", {
             opacity: 0,
-            x: 150,
+            y: 50,
             duration: .5,
             stagger: .2
         })
@@ -69,11 +73,11 @@ export default function Navbar() {
             duration: .5,
             y: -100
         }, 'same')
-        tl.current.from(".navbar .social-text", {
-            opacity: 0,
-            duration: .5,
-            y: 100
-        }, 'same')
+        // tl.current.from(".navbar .social-text", {
+        //     opacity: 0,
+        //     duration: .5,
+        //     y: 100
+        // }, 'same')
         tl.current.from(".navbar .social-links", {
             opacity: 0,
             duration: .5,
@@ -93,27 +97,23 @@ export default function Navbar() {
                 <button className="close-menu bg-black p-4 absolute top-8 right-8" onClick={() => tl.current.reverse()}>
                     <MdClose className='text-white size-10 ' />
                 </button>
-                <ul className='flex flex-col gap-8 mb-15'>
-                    <li className='text-5xl font-bold uppercase'>Services</li>
-                    <li className='text-5xl font-bold uppercase'>Work</li>
-                    <li className='text-5xl font-bold uppercase'>Testimonials</li>
-                    <li className='text-5xl font-bold uppercase'>About</li>
-                    <li className='text-5xl font-bold uppercase'>contact</li>
-                </ul>
-                <div className="social-info flex items-center gap-16 absolute bottom-10">
-                    <div className="social-text">
+                <div className="cta-text">
+                    <button onClick={()=>{window.location.href = "mailto:designhub.kay@gmail.com";}}><h2>Got a crazy idea? let's bring it to life.</h2></button>
+                </div>
+                <div className="social-info flex items-center gap-16 absolute bottom-8 right-8 mx-auto justify-center">
+                    {/* <div className="social-text">
                         <h4>Want to See More?</h4>
                         <p>Come and check out my social pages</p>
-                    </div>
+                    </div> */}
                     <div className="social-links flex gap-3 items-center">
                         <div className="social-icon bg-black p-2.5 rounded-3xl">
-                            <FaInstagram className='text-white size-7' />
+                            <a href="" target="_blank"><FaInstagram className='text-white size-7' /></a>
                         </div>
                         <div className="social-icon bg-black p-2.5 rounded-3xl">
-                            <FaYoutube className='text-white size-7' />
+                            <a href="" target="_blank"><FaYoutube className='text-white size-7' /></a>
                         </div>
                         <div className="social-icon bg-black p-2.5 rounded-3xl">
-                            <FaLinkedinIn className='text-white size-7' />
+                            <a href="" target="_blank"><FaLinkedinIn className='text-white size-7' /></a>
                         </div>
                     </div>
                 </div>
