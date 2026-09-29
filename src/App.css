@@ -13,6 +13,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   background:#000;
+  font-family: 'inter';
 }
 .secondary-color{color:#FF8F17}
 button{cursor:pointer}

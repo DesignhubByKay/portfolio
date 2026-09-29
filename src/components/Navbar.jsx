@@ -6,6 +6,7 @@ import { RiMenu4Line } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
+import logo from '../assets/logo.svg'
 import { FaLinkedinIn } from "react-icons/fa";
 import SplitText from 'gsap/SplitText';
 
@@ -88,7 +89,7 @@ export default function Navbar() {
     return (
         <header ref={headerRef} className='fixed px-5 xl:px-20 py-2.5 top-0 left-0 w-full z-20 flex justify-between items-center'>
             <div className="logo-block">
-                <h2 className='text-white logo font-medium uppercase text-2xl'>Design By Kay</h2>
+                <img src={logo} alt="Site Logo" className='h-6' />
             </div>
             <button className="nav-icon p-2" tabIndex='1' onClick={() => tl.current.play()}>
                 <RiMenu4Line className='text-white size-8' />
