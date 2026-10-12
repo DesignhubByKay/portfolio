@@ -1,5 +1,28 @@
 import React from 'react'
 import figma from '../assets/figma-icon.webp'
+import html from '../assets/html.webp'
+import wordpress from '../assets/wordpress.webp'
+import shopify from '../assets/shopify.webp'
+import webflow from '../assets/webflow.webp'
+import reactIcon from '../assets/react-icon.webp'
+import gsapIcon from '../assets/gsap.webp'
+import css from '../assets/css.webp'
+import js from '../assets/js.webp'
+import wix from '../assets/wix.webp'
+import bootstrap from '../assets/bootstrap.webp'
+import tailwind from '../assets/tailwind.webp'
+import photoshop from '../assets/photoshop.webp'
+import illustrator from '../assets/illustrator.webp'
+import ae from '../assets/ae.webp'
+import gemini from '../assets/gemini.webp'
+import kling from '../assets/kling.webp'
+import gs from '../assets/google-studios.webp'
+import runway from '../assets/runway.webp'
+import notebook from '../assets/notebook.webp'
+import claude from '../assets/claude.webp'
+import antigravity from '../assets/antigravity.webp'
+import chat from '../assets/chatGPT.webp'
+import lovable from '../assets/lovable.webp'
 import Skill from '../mini-components/Skill'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -44,31 +67,31 @@ export default function Skills() {
             <div className="skills-row overflow-hidden ">
                 <div className="skills-inner pt-5 pb-6 first-row flex flex-nowrap items-center gap-8 w-max">
                     <div className="skill-col flex flex-nowrap items-center gap-8 shrink-0">
-                        <Skill icon={figma} name='HTML'/>
-                        <Skill icon={figma} name='CSS'/>
-                        <Skill icon={figma} name='JavaScript'/>
-                        <Skill icon={figma} name='React'/>
-                        <Skill icon={figma} name='GSAP'/>
-                        <Skill icon={figma} name='Tailwind'/>
-                        <Skill icon={figma} name='Bootstrap'/>
-                        <Skill icon={figma} name='Wordpress'/>
-                        <Skill icon={figma} name='Shopify'/>
-                        <Skill icon={figma} name='Webflow'/>
-                        <Skill icon={figma} name='Wix'/>
+                        <Skill icon={html} name='HTML'/>
+                        <Skill icon={css} name='CSS'/>
+                        <Skill icon={js} name='JavaScript'/>
+                        <Skill icon={reactIcon} name='React'/>
+                        <Skill icon={gsapIcon} name='GSAP'/>
+                        <Skill icon={tailwind} name='Tailwind'/>
+                        <Skill icon={bootstrap} name='Bootstrap'/>
+                        <Skill icon={wordpress} name='Wordpress'/>
+                        <Skill icon={shopify} name='Shopify'/>
+                        <Skill icon={webflow} name='Webflow'/>
+                        <Skill icon={wix} name='Wix'/>
                         <Skill icon={figma} name='figma'/>
                     </div>
                     <div className="skill-col flex flex-nowrap items-center gap-8">
-                        <Skill icon={figma} name='HTML'/>
-                        <Skill icon={figma} name='CSS'/>
-                        <Skill icon={figma} name='JavaScript'/>
-                        <Skill icon={figma} name='React'/>
-                        <Skill icon={figma} name='GSAP'/>
-                        <Skill icon={figma} name='Tailwind'/>
-                        <Skill icon={figma} name='Bootstrap'/>
-                        <Skill icon={figma} name='Wordpress'/>
-                        <Skill icon={figma} name='Shopify'/>
-                        <Skill icon={figma} name='Webflow'/>
-                        <Skill icon={figma} name='Wix'/>
+                        <Skill icon={html} name='HTML'/>
+                        <Skill icon={css} name='CSS'/>
+                        <Skill icon={js} name='JavaScript'/>
+                        <Skill icon={reactIcon} name='React'/>
+                        <Skill icon={gsapIcon} name='GSAP'/>
+                        <Skill icon={tailwind} name='Tailwind'/>
+                        <Skill icon={bootstrap} name='Bootstrap'/>
+                        <Skill icon={wordpress} name='Wordpress'/>
+                        <Skill icon={shopify} name='Shopify'/>
+                        <Skill icon={webflow} name='Webflow'/>
+                        <Skill icon={wix} name='Wix'/>
                         <Skill icon={figma} name='figma'/>
                     </div>
                 </div>
@@ -78,32 +101,32 @@ export default function Skills() {
             <div className="skills-row overflow-hidden">
                 <div className="skills-inner pt-5 pb-6 second-row flex flex-nowrap items-center gap-8 w-max">
                     <div className="skill-col flex flex-nowrap items-center gap-8 shrink-0">
-                        <Skill icon={figma} name='Photoshop'/>
-                        <Skill icon={figma} name='Illustrator'/>
-                        <Skill icon={figma} name='After Effects'/>
-                        <Skill icon={figma} name='Nano Banana'/>
-                        <Skill icon={figma} name='Mockup Design'/>
-                        <Skill icon={figma} name='Logo and Branding'/>
-                        <Skill icon={figma} name='Graphic Design'/>
-                        <Skill icon={figma} name='Motion Design'/>
-                        <Skill icon={figma} name='Figma'/>
-                        <Skill icon={figma} name='figma'/>
-                        <Skill icon={figma} name='figma'/>
-                        <Skill icon={figma} name='figma'/>
+                        <Skill icon={photoshop} name='Photoshop'/>
+                        <Skill icon={illustrator} name='Illustrator'/>
+                        <Skill icon={ae} name='After Effects'/>
+                        <Skill icon={gemini} name='Gemini'/>
+                        <Skill icon={kling} name='Kling'/>
+                        <Skill icon={gs} name='Google Studios'/>
+                        <Skill icon={runway} name='Runway'/>
+                        <Skill icon={notebook} name='NotebookLM'/>
+                        <Skill icon={claude} name='Claude'/>
+                        <Skill icon={antigravity} name='Antigravity'/>
+                        <Skill icon={chat} name='chatGPT'/>
+                        <Skill icon={lovable} name='Lovable'/>
                     </div>
                     <div className="skill-col flex flex-nowrap items-center gap-8">
-                        <Skill icon={figma} name='Photoshop'/>
-                        <Skill icon={figma} name='Illustrator'/>
-                        <Skill icon={figma} name='After Effects'/>
-                        <Skill icon={figma} name='Nano Banana'/>
-                        <Skill icon={figma} name='Mockup Design'/>
-                        <Skill icon={figma} name='Logo and Branding'/>
-                        <Skill icon={figma} name='Graphic Design'/>
-                        <Skill icon={figma} name='Motion Design'/>
-                        <Skill icon={figma} name='Figma'/>
-                        <Skill icon={figma} name='figma'/>
-                        <Skill icon={figma} name='figma'/>
-                        <Skill icon={figma} name='figma'/>
+                        <Skill icon={photoshop} name='Photoshop'/>
+                        <Skill icon={illustrator} name='Illustrator'/>
+                        <Skill icon={ae} name='After Effects'/>
+                        <Skill icon={gemini} name='Gemini'/>
+                        <Skill icon={kling} name='Kling'/>
+                        <Skill icon={gs} name='Google Studios'/>
+                        <Skill icon={runway} name='Runway'/>
+                        <Skill icon={notebook} name='NotebookLM'/>
+                        <Skill icon={claude} name='Claude'/>
+                        <Skill icon={antigravity} name='Antigravity'/>
+                        <Skill icon={chat} name='chatGPT'/>
+                        <Skill icon={lovable} name='Lovable'/>
                     </div>
                 </div>
             </div>

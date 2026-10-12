@@ -380,6 +380,7 @@ line-height: 1;
   right:-98px;
   bottom:-49%
 }
+.skill-icon{border-radius:5px}
 
 /******** Skills CSS Ends ******/
 
@@ -758,6 +759,7 @@ line-height: 1;
     .close-menu{padding:10px}
     .cta-text{font-size:32px;}
 }
-@media screen and (max-width:575px){
-    
+@media screen and (max-width:376px){
+    .work-heading{font-size:22px}
+    .visual-block{height:350px}
 }
