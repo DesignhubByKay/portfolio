@@ -91,11 +91,11 @@ export default function Navbar() {
             <div className="logo-block">
                 <img src={logo} alt="Site Logo" className='h-6' />
             </div>
-            <button className="nav-icon p-2" tabIndex='1' onClick={() => tl.current.play()}>
+            <button className="nav-icon p-2" tabIndex='1' onClick={() => tl.current.timeScale(1.2).play()}>
                 <RiMenu4Line className='text-white size-8' />
             </button>
             <nav className="navbar absolute h-dvh bg-white top-0 right-0 py-24 px-15 flex items-center">
-                <button className="close-menu bg-black p-4 absolute top-8 right-8" onClick={() => tl.current.reverse()}>
+                <button className="close-menu bg-black p-4 absolute top-8 right-8" onClick={() => tl.current.timeScale(2).reverse()}>
                     <MdClose className='text-white size-10 ' />
                 </button>
                 <div className="cta-text">

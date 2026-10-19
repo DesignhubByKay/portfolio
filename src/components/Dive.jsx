@@ -142,7 +142,7 @@ export default function Dive() {
             }
         })
         .to('#mask', {
-                scale: 80,
+                scale: 100,
                 transformOrigin: '51% 50%',
                 duration:5
             })

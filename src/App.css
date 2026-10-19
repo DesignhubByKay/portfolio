@@ -758,7 +758,11 @@ line-height: 1;
     .project-block{min-height:unset!important;height:fit-content!important;max-height:unset!important}
     .close-menu{padding:10px}
     .cta-text{font-size:32px;}
+    .project-info p{font-size:16px;letter-spacing:0;line-height:1.6}
+    .tech-block{font-size:15px;}
+    .work-heading{line-height:1.2;font-size:24px}
 }
+
 @media screen and (max-width:376px){
     .work-heading{font-size:22px}
     .visual-block{height:350px}
